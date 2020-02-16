@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Background Color Changer</title>
+    <style>
+      #background {
+        background-color: #42253b;
+      }
+
+      #changer {
+        position: fixed;
+        width: 120px;
+        height: 60px;
+        top: 50%;
+        left: 50%;
+        margin-top: -30px;
+        margin-left: -60px;
+
+        border-radius: 10px;
+        border: 4px solid white;
+        outline: none;
+
+        color: white;
+        background: transparent;
+
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body id="background">
+    <button id="changer">Color</button>
+    <script>
+      const colors = [
+        "FF9F1C",
+        "008080",
+        "003049",
+        "CC5803",
+        "780116",
+        "DBD300",
+        "39752D",
+        "6027A5",
+        "90A955",
+        "42253B"
+      ];
+      let index = 9;
+
+      function changeBackground() {
+        index == 9 ? (index = 0) : (index = index + 1);
+        console.log(index);
+        document.getElementById(
+          "background"
+        ).style.background = `#${colors[index]}`;
+      }
+
+      document
+        .getElementById("changer")
+        .addEventListener("click", changeBackground);
+    </script>
+  </body>
+</html>
