@@ -1,0 +1,71 @@
+html {
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: rgb(226, 208, 184);
+  color: white;
+}
+
+#wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  background-color: cadetblue;
+  min-height: 40%;
+  min-width: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input {
+  position: fixed;
+  left: 50%;
+  top: 50px;
+  transform: translate(-50%);
+  background-color: rgb(226, 208, 184);
+
+  width: 90%;
+  height: 50px;
+
+  border: none;
+  font-size: 30px;
+
+  outline: none;
+  text-align: center;
+}
+
+button {
+  position: fixed;
+  left: 50%;
+  top: 130px;
+  transform: translate(-50%);
+  font-size: 30px;
+}
+
+button:hover {
+  background-color: rgb(221, 211, 204);
+}
+
+p {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 20px;
+  width: 90%;
+  margin: 0 5px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 750px) {
+  #wrapper {
+    min-width: 95%;
+    min-height: 80%;
+  }
+
+  input {
+    font-size: 18px;
+  }
+}

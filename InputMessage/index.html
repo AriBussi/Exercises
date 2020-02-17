@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Message Input</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:400,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <input id="input" type="text" placeholder="WRITE YOUR MESSAGE HERE" />
+      <button id="submit" type="submit">Send</button>
+      <p id="last">
+        Last message delivered:
+      </p>
+    </div>
+    <script>
+      //VARIABLES AND FUNCTIONS
+      const button = document.getElementById("submit");
+      const lastDelivered = document.getElementById("last");
+      const input = document.getElementById("input");
+
+      function handleMessage() {
+        const message = input.value;
+        //no message on imput
+        if (message === "") {
+          input.value = "PLEASE WRITE SOMETHING!";
+          input.style.color = "tomato";
+          lastDelivered.innerHTML = "Last message delivered: ";
+          setTimeout(function() {
+            input.value = "";
+            input.style.color = "black";
+          }, 2000);
+        } else {
+          //message recived
+          input.value = "";
+          lastDelivered.innerHTML = `Last message delivered: '${message}'`;
+        }
+      }
+      //CLICKING SUBMIT
+      button.addEventListener("click", handleMessage);
+
+      //PRESSING ENTER KEY
+      input.addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+          handleMessage();
+        }
+      });
+    </script>
+  </body>
+</html>
