@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Image Slider</title>
+  </head>
+
+  <body>
+    
+    <div id="image-container">
+        <button id='left'>&#x2B9C</button>
+      <button id='right'>&#x2B9E</button>
+    </div>
+    
+    <script>
+        const imageContainer = document.getElementById('image-container');
+        const buttonLeft = document.getElementById('left');
+        const buttonRight = document.getElementById('right');
+        let index = 1;
+
+
+        function rightClick(){
+            index == 10 ? index = 1 : index++;
+            
+            imageContainer.style.backgroundImage = `url(images/${index}.jpg`;
+        }
+
+        function leftClick(){
+            index == 1 ? index = 10 : index--;
+            
+            imageContainer.style.backgroundImage = `url(images/${index}.jpg`;
+        }
+
+        buttonRight.addEventListener('click', rightClick);
+        buttonLeft.addEventListener('click', leftClick);
+        document.addEventListener('keyup', function(event){
+            if (event.key == 'ArrowLeft') {
+                leftClick();
+            }else if (event.key == 'ArrowRight') {
+                rightClick();
+            }
+        });
+    </script>
+  </body>
+</html>
