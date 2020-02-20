@@ -1,2 +1,2 @@
 # Exercises
-Small practice exercises
+Small practice projects. javaScript, css and html.
