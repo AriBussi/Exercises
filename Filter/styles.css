@@ -1,0 +1,133 @@
+html,
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+#title {
+  height: 80px;
+  width: 100vw;
+  transform: translate(-50%);
+
+  background-color: rgb(226, 0, 0);
+  color: white;
+  text-align: center;
+  font-size: 3em;
+
+  position: relative;
+  left: 50%;
+  margin: 0;
+}
+
+#buttons-area {
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  max-width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(226, 0, 0);
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+button {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 1.2em;
+  font-weight: bold;
+  min-height: 30px;
+  min-width: 70px;
+  margin-bottom: 10px;
+  border-color: rgb(226, 0, 0);
+  border-radius: 5px;
+  background-color: seashell;
+  color: rgb(226, 0, 0);
+  outline: none;
+}
+
+button:hover {
+  background-color: rgb(197, 197, 197);
+}
+
+#players-area {
+  text-align: center;
+  min-height: 100%;
+  border-top: 3px solid rgb(226, 0, 0);
+}
+
+.player-card {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid rgb(226, 0, 0);
+  min-width: 245px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  color: rgb(226, 0, 0);
+  margin: 15px;
+}
+
+.player-info {
+  min-width: 130px;
+}
+
+.player-card img {
+  max-width: 100px;
+  max-height: 100px;
+  margin-left: 10px;
+}
+
+#search-area {
+  text-align: center;
+  margin: 40px 0;
+}
+
+#searchbar {
+  min-width: 300px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+#magnifying-glass {
+  font-size: 1.8em;
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  border: 0.1em solid rgb(226, 0, 0);
+  position: relative;
+  border-radius: 0.35em;
+}
+
+#magnifying-glass::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -0.25em;
+  bottom: -0.1em;
+  border-width: 0;
+  background: rgb(226, 0, 0);
+  width: 0.35em;
+  height: 0.08em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+@media screen and (max-width: 1200px) {
+  #buttons-area {
+    background-color: transparent;
+  }
+
+  button {
+    min-width: auto;
+    margin-top: 10px;
+  }
+  .player-card img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
